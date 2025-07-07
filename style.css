@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url('./img/table.png');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow: hidden;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    align-self: flex-start;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+.cards-slot {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 15rem;
+    height: 21rem;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.btn {
+    padding: 1em 1.5em;
+    font-size: 1.6rem;
+    color: #333;
+    background-color: gold;
+    font-weight: 700;
+    font-family: inherit;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: letter-spacing 0.3s;
+}
+
+.btn:hover {
+    letter-spacing: 1rem;
+}
+
+.btn-large {
+    font-size: 1.8rem;
+}
+
+.btn-draw {
+    align-self: stretch;
+    transition: opacity 0.3s;
+}
+
+.btn-draw:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+p {
+    font-size: 2.6rem;
+    color: #fff;
+}
+
+h1 {
+    font-size: 4.8rem;
+    color: #fff;
+}
+
+.modal {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 3rem 6rem;
+    border-radius: 20px;
+    background-color: gold;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+}
+
+.show {
+    opacity: 1;
+}
+
+.modal p {
+    color: #000;
+    font-weight: bold;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-800%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(800%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes cardsOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(800%);
+        opacity: 0;
+    }
+}
+
+.slide-in-left {
+    animation: slideInFromLeft 1s ease-in-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+.cards-out {
+    animation: cardsOut 1s ease-in-out forwards;
+}

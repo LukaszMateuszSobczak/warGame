@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com" />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+            rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="./style.css" />
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="row">
+                <button
+                    class="btn btn-small"
+                    id="getDeckBtn">
+                    New deck, please!
+                </button>
+                <p id="remainingCards">Remaining cards: 52</p>
+            </div>
+
+            <h1>War</h1>
+            <p id="computerScore">Computer: 0</p>
+
+            <div
+                class="cards"
+                id="cardsBox">
+                <div class="cards-slot"></div>
+                <div class="cards-slot"></div>
+            </div>
+            <p id="userScore">Me: 0</p>
+            <button
+                class="btn btn-large btn-draw"
+                id="getCardsBtn">
+                Draw
+            </button>
+        </div>
+
+        <div class="modal" id="modalWindow">
+            <p id="modalText">Computer +1</p>
+        </div>
+        <script src="./app.js"></script>
+    </body>
+</html>
